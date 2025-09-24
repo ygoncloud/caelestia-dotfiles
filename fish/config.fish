@@ -9,4 +9,9 @@ if status is-interactive
     function mark_prompt_start --on-event fish_prompt
         echo -en "\e]133;A\e\\"
     end
+
+    # Pyenv init
+    fish_add_path $HOME/.pyenv/bin
+    pyenv init - | source
+
 end
